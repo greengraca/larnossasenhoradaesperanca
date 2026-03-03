@@ -36,3 +36,7 @@ yarn-error.log*
 next-env.d.ts
 
 GEMINI.md
+
+# claude
+CLAUDE.md
+.claude/

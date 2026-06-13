@@ -21,6 +21,7 @@ export default function Footer() {
                         <nav className="flex flex-col gap-3">
                             <Link href="/" className="font-sans text-sm text-cream/80 hover:text-cream hover:-translate-y-[1px] transition-all w-fit">Início</Link>
                             <Link href="/sobre" className="font-sans text-sm text-cream/80 hover:text-cream hover:-translate-y-[1px] transition-all w-fit">Sobre Nós</Link>
+                            <Link href="/a-nossa-casa" className="font-sans text-sm text-cream/80 hover:text-cream hover:-translate-y-[1px] transition-all w-fit">A Nossa Casa</Link>
                             <Link href="/servicos" className="font-sans text-sm text-cream/80 hover:text-cream hover:-translate-y-[1px] transition-all w-fit">Serviços</Link>
                             <Link href="/contacto" className="font-sans text-sm text-cream/80 hover:text-cream hover:-translate-y-[1px] transition-all w-fit">Contacto</Link>
                         </nav>

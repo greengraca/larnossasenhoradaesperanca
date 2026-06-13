@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
     { name: "Início", path: "/" },
     { name: "Sobre Nós", path: "/sobre" },
+    { name: "A Nossa Casa", path: "/a-nossa-casa" },
     { name: "Serviços", path: "/servicos" },
     { name: "Contacto", path: "/contacto" },
 ];
@@ -40,7 +41,7 @@ export default function Navbar() {
                     } rounded-[2rem] md:rounded-full`}
             >
                 <div className="flex items-center justify-between w-full px-6 lg:px-8 py-3.5">
-                    <div className="w-auto md:w-1/3 flex justify-start items-center">
+                    <div className="w-auto lg:flex-1 flex justify-start items-center">
                         <Link href="/" className="group flex flex-col shrink-0">
                             <span className={`font-serif text-xl sm:text-2xl font-medium tracking-wide transition-colors duration-300 drop-shadow-sm group-hover:-translate-y-[1px] ${!isScrolled && pathname === '/' && !isMobileMenuOpen ? "text-cream" : "text-charcoal"}`}>
                                 Nossa Senhora da Esperança
@@ -48,7 +49,7 @@ export default function Navbar() {
                         </Link>
                     </div>
 
-                    <div className="w-1/3 hidden md:flex items-center justify-center gap-6 lg:gap-8">
+                    <div className="hidden lg:flex items-center justify-center gap-5 xl:gap-8">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.path;
                             const isHomeTop = !isScrolled && pathname === '/' && !isMobileMenuOpen;
@@ -64,10 +65,10 @@ export default function Navbar() {
                         })}
                     </div>
 
-                    <div className="w-auto md:w-1/3 flex justify-end items-center gap-4">
+                    <div className="w-auto lg:flex-1 flex justify-end items-center gap-4">
                         <Link
                             href="/contacto"
-                            className={`hidden md:inline-flex items-center justify-center font-sans font-medium text-sm px-6 py-2.5 lg:px-8 lg:py-3 rounded-full overflow-hidden group hover:scale-[1.03] transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] relative ${(!isScrolled && pathname === '/' && !isMobileMenuOpen) ? 'bg-cream text-charcoal' : 'bg-rose text-cream'}`}
+                            className={`hidden lg:inline-flex items-center justify-center font-sans font-medium text-sm px-6 py-2.5 xl:px-8 xl:py-3 rounded-full overflow-hidden group hover:scale-[1.03] transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] relative ${(!isScrolled && pathname === '/' && !isMobileMenuOpen) ? 'bg-cream text-charcoal' : 'bg-rose text-cream'}`}
                         >
                             <span className="relative z-10 transition-colors duration-300">Marcar Visita</span>
                             <div className={`absolute inset-0 scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] z-0 ${(!isScrolled && pathname === '/' && !isMobileMenuOpen) ? 'bg-rose' : 'bg-stone'}`} />
@@ -75,7 +76,7 @@ export default function Navbar() {
 
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className={`md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-full shrink-0 transition-colors duration-300 ${(!isScrolled && pathname === '/' && !isMobileMenuOpen) ? 'bg-cream/20 text-cream hover:bg-cream/30' : 'bg-stone/10 text-charcoal hover:bg-stone/20'}`}
+                            className={`lg:hidden flex flex-col justify-center items-center w-10 h-10 rounded-full shrink-0 transition-colors duration-300 ${(!isScrolled && pathname === '/' && !isMobileMenuOpen) ? 'bg-cream/20 text-cream hover:bg-cream/30' : 'bg-stone/10 text-charcoal hover:bg-stone/20'}`}
                         >
                             <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-[1.5px]' : 'mb-1'}`}></span>
                             <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'mb-1'}`}></span>
@@ -85,7 +86,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Dropdown Menu */}
-                <div className={`md:hidden flex flex-col items-center justify-center gap-6 transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isMobileMenuOpen ? 'max-h-[400px] opacity-100 pb-8 pt-4' : 'max-h-0 opacity-0 py-0'}`}>
+                <div className={`lg:hidden flex flex-col items-center justify-center gap-6 transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${isMobileMenuOpen ? 'max-h-[400px] opacity-100 pb-8 pt-4' : 'max-h-0 opacity-0 py-0'}`}>
                     {navLinks.map((link) => {
                         const isActive = pathname === link.path;
                         return (

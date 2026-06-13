@@ -72,8 +72,8 @@ export default function Home() {
       {/* Hero Section */}
       <section ref={heroRef} className="relative w-full h-[100dvh] min-h-[600px] flex items-end pb-24 md:pb-32 px-6 md:px-12 overflow-hidden bg-charcoal">
         <img
-          src="https://images.unsplash.com/photo-1576765974102-b756026ecee3?q=80&w=2938&auto=format&fit=crop"
-          alt="Ambiente acolhedor e familiar"
+          src="/images/sala-comum.jpg"
+          alt="Sala comum acolhedora do Lar Familiar Nossa Senhora da Esperança"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-70 scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent pointer-events-none" />
@@ -144,8 +144,8 @@ export default function Home() {
       <section ref={philRef} className="relative w-full py-32 md:py-48 px-6 md:px-12 bg-charcoal overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none">
           <img
-            src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&q=80&w=2600"
-            alt="Textura de fundo"
+            src="/images/paisagem.jpg"
+            alt="Paisagem envolvente do lar em Roliça"
             className="absolute inset-0 w-full h-full object-cover object-center grayscale"
           />
         </div>
@@ -163,7 +163,7 @@ export default function Home() {
       {/* CTA Banner */}
       <section className="relative w-full py-24 md:py-32 px-6 md:px-12 bg-cream flex justify-center text-center">
         <div className="w-full max-w-3xl flex flex-col items-center gap-10 bg-stone p-10 md:p-16 rounded-[2.5rem] shadow-xl relative overflow-hidden group">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516086745152-19e49c7161b0?q=80&w=2670&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay transition-transform duration-1000 group-hover:scale-105" />
+          <div className="absolute inset-0 bg-[url('/images/exterior.jpg')] opacity-10 bg-cover bg-center mix-blend-overlay transition-transform duration-1000 group-hover:scale-105" />
 
           <div className="relative z-10 flex flex-col items-center gap-4">
             <h2 className="font-serif text-4xl md:text-5xl text-cream">Venha conhecer a nossa casa</h2>

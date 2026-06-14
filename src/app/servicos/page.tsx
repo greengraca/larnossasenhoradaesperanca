@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Stethoscope, Users, HeartHandshake, Sparkles, Car, Flower2, Waves, ChefHat, Dumbbell, Sprout } from "lucide-react";
+import { Stethoscope, Users, HeartHandshake, Car, ChefHat, Dumbbell, Sprout } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,14 +66,10 @@ const mainServices = [
 ];
 
 const additionalServices = [
-    { icon: ChefHat, title: "Cozinha própria", desc: "Confeção rigorosa de todas as refeições nas nossas instalações, com ingredientes frescos." },
-    { icon: Dumbbell, title: "Fisioterapia", desc: "Promoção, manutenção e recuperação da saúde física específica de cada residente." },
-    { icon: HeartHandshake, title: "Apoio Psicossocial", desc: "Acompanhamento emocional contínuo para residentes e famílias." },
-    { icon: Sparkles, title: "Higiene Pessoal e Imagem", desc: "Cuidados diários assistidos, serviço de cabeleireiro e estética disponíveis." },
-    { icon: Sprout, title: "Jardinagem e horta", desc: "Atividades de jardinagem e mini agricultura nos nossos espaços exteriores." },
-    { icon: Car, title: "Transporte e Passeios", desc: "Viatura própria e adaptada para consultas, passeios recreativos e atividades no exterior." },
-    { icon: Flower2, title: "Espaços Verdes e Ar Livre", desc: "Jardins seguros e tranquilos desenhados para a mobilidade reduzida." },
-    { icon: Waves, title: "Lavandaria Própria", desc: "Tratamento meticuloso de roupa pessoal e de cama nas nossas instalações." },
+    { icon: ChefHat, title: "Cozinha própria", desc: "Confeção rigorosa da alimentação nas nossas instalações." },
+    { icon: Dumbbell, title: "Fisioterapia", desc: "Promoção, manutenção e recuperação da saúde específica de cada um." },
+    { icon: Sprout, title: "Jardinagem e horta", desc: "Atividades de jardinagem e mini agricultura." },
+    { icon: Car, title: "Passeios recreativos", desc: "Dispomos de viatura própria e adaptada para passeios." },
 ];
 
 export default function Servicos() {
@@ -234,7 +230,7 @@ export default function Servicos() {
                         Pequenos detalhes de conforto que garantem uma estadia livre de preocupações para toda a família.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
                         {additionalServices.map((srv, i) => (
                             <div key={i} className="add-service-card bg-stone/5 p-8 rounded-[2rem] border border-stone/10 hover:border-stone/30 hover:bg-stone/10 transition-colors flex flex-col gap-4">
                                 <srv.icon className="w-6 h-6 text-rose" />

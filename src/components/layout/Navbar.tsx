@@ -42,7 +42,10 @@ export default function Navbar() {
             >
                 <div className="flex items-center justify-between w-full px-6 lg:px-8 py-3.5">
                     <div className="w-auto lg:flex-1 flex justify-start items-center">
-                        <Link href="/" className="group flex flex-col shrink-0">
+                        <Link href="/" className="group flex flex-col shrink-0 leading-none">
+                            <span className="font-accent text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.25em] text-rose mb-0.5 drop-shadow-sm">
+                                Lar Familiar
+                            </span>
                             <span className={`font-serif text-xl sm:text-2xl font-medium tracking-wide transition-colors duration-300 drop-shadow-sm group-hover:-translate-y-[1px] ${!isScrolled && pathname === '/' && !isMobileMenuOpen ? "text-cream" : "text-charcoal"}`}>
                                 Nossa Senhora da Esperança
                             </span>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -8,9 +8,14 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 hover:text-white transition-colors duration-300">
 
                     <div className="flex flex-col gap-4">
-                        <h3 className="font-serif text-3xl font-medium tracking-wide">
-                            Nossa Senhora da Esperança
-                        </h3>
+                        <div>
+                            <span className="block font-accent text-xs font-semibold uppercase tracking-[0.25em] text-rose mb-1">
+                                Lar Familiar
+                            </span>
+                            <h3 className="font-serif text-3xl font-medium tracking-wide">
+                                Nossa Senhora da Esperança
+                            </h3>
+                        </div>
                         <p className="font-sans text-cream/70 text-sm max-w-xs">
                             Líder na arte de cuidar. Um ambiente familiar e humanizado no coração da Roliça.
                         </p>
@@ -30,13 +35,13 @@ export default function Footer() {
                     <div className="flex flex-col gap-4">
                         <h4 className="font-sans font-semibold text-rose uppercase tracking-wider text-xs">Contacto</h4>
                         <div className="flex flex-col gap-3">
-                            <a href="tel:913844028" className="flex items-center gap-2 font-sans text-sm text-cream/80 hover:text-cream group w-fit">
+                            <a href="tel:913835271" className="flex items-center gap-2 font-sans text-sm text-cream/80 hover:text-cream group w-fit">
                                 <Phone className="w-4 h-4 group-hover:text-rose transition-colors" />
-                                <span>913 844 028</span>
+                                <span>913 835 271</span>
                             </a>
-                            <a href="tel:918299532" className="flex items-center gap-2 font-sans text-sm text-cream/80 hover:text-cream group w-fit">
+                            <a href="tel:262608326" className="flex items-center gap-2 font-sans text-sm text-cream/80 hover:text-cream group w-fit">
                                 <Phone className="w-4 h-4 group-hover:text-rose transition-colors" />
-                                <span>918 299 532</span>
+                                <span>262 608 326</span>
                             </a>
                             <a href="mailto:instantedeternura@gmail.com" className="flex items-center gap-2 font-sans text-sm text-cream/80 hover:text-cream group w-fit">
                                 <Mail className="w-4 h-4 group-hover:text-rose transition-colors" />
@@ -54,9 +59,6 @@ export default function Footer() {
                         <div className="flex gap-4">
                             <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-cream hover:bg-rose hover:-translate-y-1 transition-all duration-300">
                                 <Facebook className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-cream hover:bg-rose hover:-translate-y-1 transition-all duration-300">
-                                <Instagram className="w-5 h-5" />
                             </a>
                         </div>
 

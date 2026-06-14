@@ -1,8 +1,13 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import gsap from "gsap";
-import { Mail, Phone, MapPin, Facebook, Instagram, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Send, CheckCircle } from "lucide-react";
+
+// Chave de acesso Web3Forms — gera grátis em https://web3forms.com com o email do lar.
+// As mensagens do formulário chegam diretamente a esse email (sem painel nem login).
+const WEB3FORMS_ACCESS_KEY = "COLOQUE_AQUI_A_CHAVE_WEB3FORMS";
 
 export default function Contacto() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -16,6 +21,7 @@ export default function Contacto() {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -54,19 +60,39 @@ export default function Contacto() {
         setFormData((prev) => ({ ...prev, [name]: val }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!formData.gdpr) return;
 
         setIsSubmitting(true);
-        // Simulate API call
-        setTimeout(() => {
+        setError(false);
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json", Accept: "application/json" },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_ACCESS_KEY,
+                    subject: "Novo contacto do website — Lar Familiar Nossa Senhora da Esperança",
+                    from_name: "Website — Lar Familiar Nossa Senhora da Esperança",
+                    name: formData.name,
+                    phone: formData.phone,
+                    email: formData.email,
+                    message: formData.message,
+                }),
+            });
+            const data = await res.json();
+            if (data.success) {
+                setIsSuccess(true);
+                setFormData({ name: "", phone: "", email: "", message: "", gdpr: false });
+                setTimeout(() => setIsSuccess(false), 6000);
+            } else {
+                setError(true);
+            }
+        } catch {
+            setError(true);
+        } finally {
             setIsSubmitting(false);
-            setIsSuccess(true);
-            setFormData({ name: "", phone: "", email: "", message: "", gdpr: false });
-
-            setTimeout(() => setIsSuccess(false), 5000);
-        }, 1500);
+        }
     };
 
     return (
@@ -176,9 +202,15 @@ export default function Contacto() {
                                         />
                                     </div>
                                     <label htmlFor="gdpr" className="font-sans text-sm text-charcoal/70 leading-relaxed cursor-pointer select-none">
-                                        Concordo com a Política de Privacidade e autorizo o tratamento dos meus dados pessoais para resposta ao meu pedido.
+                                        Concordo com a <Link href="/privacidade" className="text-rose underline underline-offset-2 hover:text-rose/80">Política de Privacidade</Link> e autorizo o tratamento dos meus dados pessoais para resposta ao meu pedido.
                                     </label>
                                 </div>
+
+                                {error && (
+                                    <p className="form-element font-sans text-sm text-red-700 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+                                        Não foi possível enviar a mensagem. Por favor, tente novamente ou contacte-nos por telefone.
+                                    </p>
+                                )}
 
                                 <button
                                     type="submit"
@@ -216,9 +248,8 @@ export default function Contacto() {
                                     <Phone className="w-6 h-6 text-rose shrink-0" />
                                     <div className="font-sans flex flex-col gap-1">
                                         <p className="text-sm text-cream/60">Contactos</p>
-                                        <a href="tel:913844028" className="text-base text-cream/90 hover:text-rose transition-colors">913 844 028</a>
-                                        <a href="tel:918299532" className="text-base text-cream/90 hover:text-rose transition-colors">918 299 532</a>
-                                        <a href="tel:913787535" className="text-base text-cream/90 hover:text-rose transition-colors">913 787 535</a>
+                                        <a href="tel:913835271" className="text-base text-cream/90 hover:text-rose transition-colors">913 835 271</a>
+                                        <a href="tel:262608326" className="text-base text-cream/90 hover:text-rose transition-colors">262 608 326</a>
                                     </div>
                                 </div>
 
@@ -233,16 +264,13 @@ export default function Contacto() {
 
                             <div className="pt-6 border-t border-cream/10 mt-2">
                                 <p className="font-mono text-sm tracking-widest uppercase text-rose mb-4">Horário de Visitas</p>
-                                <p className="font-serif text-2xl text-cream/90">10h00 — 19h00</p>
-                                <p className="font-sans text-xs text-cream/50 mt-1">Todos os dias, incluindo fins de semana e feriados.</p>
+                                <p className="font-serif text-2xl text-cream/90">10h30 — 18h30</p>
+                                <p className="font-sans text-xs text-cream/50 mt-1">Todos os dias · com respeito pelo horário de refeição.</p>
                             </div>
 
                             <div className="flex gap-4 mt-2">
                                 <a href="#" className="w-12 h-12 rounded-full border border-cream/20 flex items-center justify-center text-cream hover:bg-rose hover:border-transparent transition-all">
                                     <Facebook className="w-5 h-5" />
-                                </a>
-                                <a href="#" className="w-12 h-12 rounded-full border border-cream/20 flex items-center justify-center text-cream hover:bg-rose hover:border-transparent transition-all">
-                                    <Instagram className="w-5 h-5" />
                                 </a>
                             </div>
                         </div>

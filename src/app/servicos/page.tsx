@@ -3,16 +3,16 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Stethoscope, Users, Apple, HeartHandshake, Sparkles, Car, Flower2, Waves } from "lucide-react";
+import { Stethoscope, Users, HeartHandshake, Sparkles, Car, Flower2, Waves, ChefHat, Dumbbell, Sprout } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const mainServices = [
     {
         step: "01",
-        title: "Cuidados Médicos",
-        desc: "A nossa equipa clínica e de enfermagem está disponível 24 horas por dia, assegurando gestão rigorosa da medicação, acompanhamento de patologias crónicas e resposta imediata a qualquer necessidade de saúde. Cada residente beneficia de um plano individual de cuidados médicos, garantindo não só a sua estabilidade clínica, mas também o seu conforto e dignidade constantes.",
-        icon: Stethoscope,
+        title: "Atividades de vida diária",
+        desc: "O serviço de apoio nas atividades de vida diárias do Lar Familiar Nossa Senhora da Esperança tem como principal objetivo promover o bem-estar, a autonomia e a dignidade de cada residente. Prestamos apoio personalizado em tarefas essenciais como a higiene pessoal, alimentação, mobilidade, vestuário e cuidados de saúde, sempre com respeito pelas rotinas e preferências individuais. Trabalhamos diariamente para criar um ambiente acolhedor, onde cada residente se sente cuidado, valorizado e em família.",
+        icon: HeartHandshake,
         bgColor: "bg-sage/10",
         svg: (
             <svg viewBox="0 0 800 400" className="w-full h-full text-sage opacity-40">
@@ -31,8 +31,8 @@ const mainServices = [
     },
     {
         step: "02",
-        title: "Atividades e Bem-Estar",
-        desc: "O envelhecimento ativo é um pilar da nossa filosofia. Desenvolvemos programas diários adaptados, focados na estimulação cognitiva e manutenção da mobilidade. Promovemos momentos de partilha social, trabalhos manuais e acesso aos nossos jardins terapêuticos, assegurando que o brilho no olhar se mantém vivo. Uma mente sã acompanhada de um coração alegre fazem a diferença.",
+        title: "Animação e terapia ocupacional",
+        desc: "Promovemos o envelhecimento ativo e a participação social dos residentes. Através de atividades lúdicas, culturais, cognitivas e motoras, estimulamos as capacidades físicas e mentais, reforçando a autoestima e o sentido de utilidade. Cada plano de atividades é adaptado às necessidades, interesses e história de vida de cada um.",
         icon: Users,
         bgColor: "bg-rose/10",
         svg: (
@@ -47,9 +47,9 @@ const mainServices = [
     },
     {
         step: "03",
-        title: "Nutrição e Alimentação",
-        desc: "Acreditamos que a alimentação é um dos grandes prazeres da vida e um elemento fundamental para a saúde. As nossas refeições são confecionadas nas nossas instalações, privilegiando ingredientes frescos e locais. Oferecemos planos alimentares totalmente personalizados por nutricionistas, respeitando restrições dietéticas e preferências individuais, num ambiente de convívio familiar à mesa.",
-        icon: Apple,
+        title: "Cuidados de saúde",
+        desc: "Asseguramos acompanhamento clínico contínuo e personalizado, garantindo a segurança e o bem-estar de cada residente. A nossa equipa de profissionais qualificados presta cuidados de enfermagem, gestão de medicação, vigilância de sinais vitais e articulação com médicos e outros especialistas. Trabalhamos de forma preventiva e atenta, promovendo a estabilidade da saúde e a rápida resposta a qualquer necessidade.",
+        icon: Stethoscope,
         bgColor: "bg-stone/10",
         svg: (
             <svg viewBox="0 0 800 400" className="w-full h-full text-stone opacity-40">
@@ -66,12 +66,14 @@ const mainServices = [
 ];
 
 const additionalServices = [
+    { icon: ChefHat, title: "Cozinha própria", desc: "Confeção rigorosa de todas as refeições nas nossas instalações, com ingredientes frescos." },
+    { icon: Dumbbell, title: "Fisioterapia", desc: "Promoção, manutenção e recuperação da saúde física específica de cada residente." },
     { icon: HeartHandshake, title: "Apoio Psicossocial", desc: "Acompanhamento emocional contínuo para residentes e famílias." },
     { icon: Sparkles, title: "Higiene Pessoal e Imagem", desc: "Cuidados diários assistidos, serviço de cabeleireiro e estética disponíveis." },
-    { icon: Car, title: "Transporte e Acompanhamento", desc: "Transporte adaptado para consultas e passeios com apoio de um profissional." },
+    { icon: Sprout, title: "Jardinagem e horta", desc: "Atividades de jardinagem e mini agricultura nos nossos espaços exteriores." },
+    { icon: Car, title: "Transporte e Passeios", desc: "Viatura própria e adaptada para consultas, passeios recreativos e atividades no exterior." },
     { icon: Flower2, title: "Espaços Verdes e Ar Livre", desc: "Jardins seguros e tranquilos desenhados para a mobilidade reduzida." },
     { icon: Waves, title: "Lavandaria Própria", desc: "Tratamento meticuloso de roupa pessoal e de cama nas nossas instalações." },
-    { icon: Users, title: "Animação Sociocultural", desc: "Festividades, celebrações e atividades enriquecedoras com a comunidade." },
 ];
 
 export default function Servicos() {
@@ -175,7 +177,7 @@ export default function Servicos() {
             {/* Hero Section */}
             <section className="relative w-full pt-40 pb-24 md:pt-48 md:pb-32 px-6 md:px-12 bg-sage/20 flex justify-center overflow-hidden">
                 {/* Subtle texture for hero instead of image */}
-                <div className="absolute inset-0 opacity-10 mix-blend-multiply pointer-events-none bg-[url('https://images.unsplash.com/photo-1596489395232-fb94e5ec442e?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center" />
+                <div className="absolute inset-0 opacity-10 mix-blend-multiply pointer-events-none bg-[url('/images/galeria/4451.jpg')] bg-cover bg-center" />
 
                 <div className="relative z-10 w-full max-w-4xl flex flex-col items-center text-center gap-6">
                     <h1 className="hero-text font-serif text-5xl md:text-7xl text-charcoal leading-tight">

@@ -8,24 +8,17 @@ import { Heart, Home as HomeIcon, Star, Sun } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const timeline = [
-    { year: "2010", title: "O Início do Sonho", desc: "Abertura das portas com a visão de criar um lar que fosse verdadeiramente uma extensão da família." },
-    { year: "2015", title: "Expansão dos Cuidados", desc: "Integração de equipa médica 24h e modernização das instalações para maior conforto." },
-    { year: "2020", title: "Reconhecimento de Excelência", desc: "Distinguido pelas práticas humanizadas no cuidado sénior na região Oeste." },
-    { year: "2024", title: "Renovação e Futuro", desc: "Atualização de todos os espaços de bem-estar com foco na sustentabilidade e terapias avançadas." }
+    { year: "2006", title: "O Início do Sonho", desc: "Abertura das portas com a visão de criar um lar que fosse verdadeiramente uma extensão da família." },
+    { year: "2014", title: "Reestruturação", desc: "Com a renovação estrutural da instalação, atualizámos também todo o programa de animação, com especial foco na estimulação cognitiva e motora." },
+    { year: "2022", title: "Renovação", desc: "Atualização de todos os espaços de bem-estar com foco na sustentabilidade e terapias avançadas." },
+    { year: "2026", title: "Futuro", desc: "Asseguraremos cuidados personalizados com qualidade e dedicação, investindo continuamente no bem-estar, conforto e segurança de cada residente." }
 ];
 
 const values = [
     { icon: Heart, title: "Dignidade", desc: "Tratamos cada residente com o respeito e reverência que a sua história de vida merece." },
     { icon: HomeIcon, title: "Família", desc: "Cultivamos um ambiente acolhedor onde os afetos são tão importantes quanto a saúde." },
-    { icon: Star, title: "Profissionalismo", desc: "O nosso rigor clínico garante segurança, confiança e paz de espírito em todos os momentos." },
+    { icon: Star, title: "Profissionalismo", desc: "O nosso rigor garante segurança, confiança e paz de espírito em todos os momentos." },
     { icon: Sun, title: "Esperança", desc: "Acreditamos que cada dia é uma oportunidade para sorrir, aprender e partilhar." }
-];
-
-const team = [
-    { name: "Dra. Maria Helena", role: "Diretora Técnica", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2788&auto=format&fit=crop" },
-    { name: "Enf. João Silva", role: "Enfermeiro Chefe", img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2670&auto=format&fit=crop" },
-    { name: "Sofia Mendes", role: "Animadora Sociocultural", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2661&auto=format&fit=crop" },
-    { name: "Rita Costa", role: "Nutricionista Clínica", img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800" }
 ];
 
 export default function Sobre() {
@@ -64,18 +57,6 @@ export default function Sobre() {
                 duration: 0.8,
                 stagger: 0.1,
                 ease: "power2.out",
-            });
-
-            gsap.from(".team-member", {
-                scrollTrigger: {
-                    trigger: ".team-grid",
-                    start: "top 80%",
-                },
-                y: 40,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.15,
-                ease: "power3.out",
             });
 
         }, containerRef);
@@ -141,36 +122,6 @@ export default function Sobre() {
                                 <div>
                                     <h3 className="font-serif text-2xl mb-3">{v.title}</h3>
                                     <p className="font-sans text-cream/70 text-sm leading-relaxed">{v.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Team Section */}
-            <section className="relative w-full py-24 md:py-32 px-6 md:px-12 bg-stone/5 flex justify-center">
-                <div className="w-full max-w-6xl flex flex-col items-center">
-                    <h2 className="font-serif text-4xl text-charcoal mb-4 text-center">A Nossa Equipa</h2>
-                    <p className="font-sans text-charcoal/60 text-center max-w-2xl mb-16">
-                        Profissionais dedicados, movidos pela vocação de cuidar e garantir o bem-estar absoluto de todos os nossos residentes.
-                    </p>
-
-                    <div className="team-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
-                        {team.map((member, i) => (
-                            <div key={i} className="team-member group relative w-full aspect-[3/4] rounded-[2rem] overflow-hidden bg-stone/10 isolate">
-                                <img
-                                    src={member.img}
-                                    alt={member.name}
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
-                                {/* Gradient overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent z-10" />
-
-                                {/* Content info */}
-                                <div className="absolute bottom-0 left-0 w-full p-6 z-20 flex flex-col justify-end translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                                    <h3 className="font-serif text-2xl text-cream">{member.name}</h3>
-                                    <p className="font-sans text-rose text-sm font-medium mt-1">{member.role}</p>
                                 </div>
                             </div>
                         ))}

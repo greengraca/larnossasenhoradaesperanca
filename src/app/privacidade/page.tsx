@@ -1,68 +1,85 @@
 import Link from "next/link";
 
 // NOTA: Texto-base de RGPD para revisão jurídica. Os campos entre [parênteses]
-// devem ser confirmados pelo Lar (denominação social, NIF, encarregado de dados).
+// devem ser confirmados pelo Lar (denominação social, NIF e, caso aplicável,
+// o contacto do Encarregado de Proteção de Dados).
 
 const sections = [
   {
     title: "1. Responsável pelo tratamento",
     body: [
       "O responsável pelo tratamento dos seus dados pessoais é o Lar Familiar Nossa Senhora da Esperança [denominação social e NIF a confirmar], com morada na Rua Condessa Maria Delgada 58, 2540-624 Roliça, Portugal.",
-      "Para qualquer questão relacionada com a proteção de dados, pode contactar-nos através do email instantedeternura@gmail.com ou dos telefones 913 835 271 e 262 608 326.",
+      "Para qualquer questão relacionada com proteção de dados, pode contactar-nos através do email instantedeternura@gmail.com ou dos telefones 913 835 271 e 262 608 326.",
+      "Encarregado de Proteção de Dados (EPD): [contacto a indicar, caso esteja designado].",
     ],
   },
   {
-    title: "2. Que dados recolhemos",
+    title: "2. Âmbito desta política",
     body: [
-      "Recolhemos apenas os dados que nos fornece voluntariamente através do formulário de contacto do website — nomeadamente nome, número de telefone, endereço de email e o conteúdo da mensagem.",
-      "Não recolhemos dados sensíveis através do website nem utilizamos perfis automatizados de visitantes.",
+      "Esta política aplica-se aos dados pessoais recolhidos através deste website. O tratamento de dados dos residentes e das suas famílias, no âmbito da prestação de cuidados, rege-se por documentação própria, disponibilizada diretamente pelo Lar.",
     ],
   },
   {
-    title: "3. Finalidade do tratamento",
+    title: "3. Que dados recolhemos",
     body: [
-      "Os dados recolhidos destinam-se exclusivamente a dar resposta ao seu pedido de contacto, marcação de visita ou esclarecimento de dúvidas. Não são utilizados para marketing nem partilhados com terceiros para esse fim.",
+      "Recolhemos apenas os dados que nos fornece voluntariamente através do formulário de contacto — nome, número de telefone, endereço de email e o conteúdo da mensagem.",
+      "O website não recolhe dados de saúde nem cria perfis dos visitantes. O fornecimento destes dados é facultativo, mas necessário para podermos responder ao seu pedido.",
     ],
   },
   {
-    title: "4. Fundamento legal",
+    title: "4. Finalidade do tratamento",
     body: [
-      "O tratamento dos seus dados assenta no seu consentimento, manifestado no momento do envio do formulário, e no interesse legítimo do Lar em responder a contactos e pedidos de informação, ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD).",
+      "Os dados destinam-se exclusivamente a responder ao seu pedido de contacto, marcação de visita ou esclarecimento de dúvidas. Não são utilizados para marketing nem partilhados com terceiros para esse fim.",
     ],
   },
   {
-    title: "5. Conservação dos dados",
+    title: "5. Fundamento legal",
     body: [
-      "Os dados são conservados apenas durante o período necessário para dar resposta ao seu pedido e cumprir eventuais obrigações legais aplicáveis, sendo posteriormente eliminados de forma segura.",
+      "O tratamento assenta no seu consentimento, manifestado no envio do formulário (artigo 6.º, n.º 1, alínea a, do RGPD), e no interesse legítimo do Lar em responder a contactos e pedidos de informação (alínea f).",
+      "Pode retirar o seu consentimento a qualquer momento, sem que isso afete a licitude do tratamento efetuado anteriormente.",
     ],
   },
   {
-    title: "6. Partilha e subcontratantes",
+    title: "6. Conservação dos dados",
     body: [
-      "O envio do formulário é processado através de um serviço de entrega de email (Web3Forms), que reencaminha a sua mensagem para o email do Lar. Não vendemos nem cedemos os seus dados a terceiros.",
+      "Conservamos os dados apenas durante o período necessário para responder ao seu pedido e cumprir eventuais obrigações legais, sendo depois eliminados de forma segura.",
+      "As mensagens enviadas através do formulário são processadas pelo serviço Web3Forms, que as elimina automaticamente no prazo de 30 dias.",
     ],
   },
   {
-    title: "7. Os seus direitos",
+    title: "7. Subcontratantes e transferências internacionais",
     body: [
-      "Enquanto titular dos dados, tem o direito de aceder, retificar, apagar, limitar ou opor-se ao tratamento dos seus dados, bem como o direito à portabilidade e a retirar o consentimento a qualquer momento.",
-      "Para exercer estes direitos, contacte-nos através de instantedeternura@gmail.com. Tem ainda o direito de apresentar reclamação junto da Comissão Nacional de Proteção de Dados (CNPD).",
+      "O envio do formulário é processado pela Web3Forms, que reencaminha a mensagem para o email do Lar. Não vendemos nem cedemos os seus dados a terceiros.",
+      "A Web3Forms processa e armazena temporariamente os dados em servidores localizados nos Estados Unidos da América (infraestrutura Amazon Web Services), com encriptação. Esta operação implica uma transferência dos seus dados para fora do Espaço Económico Europeu; ao enviar o formulário, autoriza essa transferência (artigo 49.º, n.º 1, alínea a, do RGPD).",
     ],
   },
   {
-    title: "8. Cookies",
+    title: "8. Os seus direitos",
     body: [
-      "Este website utiliza apenas cookies essenciais ao seu funcionamento e à memorização das suas preferências de consentimento. Pode gerir as suas preferências a qualquer momento através do banner de cookies.",
+      "Tem o direito de aceder, retificar, apagar, limitar ou opor-se ao tratamento dos seus dados, bem como o direito à portabilidade e a retirar o consentimento a qualquer momento.",
+      "Para exercer estes direitos, contacte-nos através de instantedeternura@gmail.com. Tem ainda o direito de apresentar reclamação à Comissão Nacional de Proteção de Dados (CNPD) — www.cnpd.pt.",
     ],
   },
   {
-    title: "9. Segurança",
+    title: "9. Decisões automatizadas",
+    body: [
+      "Não tomamos decisões automatizadas nem efetuamos definição de perfis (profiling) com base nos seus dados pessoais.",
+    ],
+  },
+  {
+    title: "10. Cookies",
+    body: [
+      "Este website utiliza apenas cookies e armazenamento local essenciais ao seu funcionamento e à memorização das suas preferências de consentimento. Pode geri-las a qualquer momento através do banner de cookies.",
+    ],
+  },
+  {
+    title: "11. Segurança",
     body: [
       "Adotamos medidas técnicas e organizativas adequadas para proteger os seus dados contra acesso, perda ou divulgação não autorizados.",
     ],
   },
   {
-    title: "10. Alterações a esta política",
+    title: "12. Alterações a esta política",
     body: [
       "Esta política poderá ser atualizada periodicamente. Qualquer alteração será publicada nesta página, com indicação da respetiva data de atualização.",
     ],

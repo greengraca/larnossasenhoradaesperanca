@@ -7,7 +7,7 @@ import { Mail, Phone, MapPin, Facebook, Send, CheckCircle } from "lucide-react";
 
 // Chave de acesso Web3Forms — gera grátis em https://web3forms.com com o email do lar.
 // As mensagens do formulário chegam diretamente a esse email (sem painel nem login).
-const WEB3FORMS_ACCESS_KEY = "COLOQUE_AQUI_A_CHAVE_WEB3FORMS";
+const WEB3FORMS_ACCESS_KEY = "a3457a74-8039-4ec8-890a-139f27804727";
 
 export default function Contacto() {
     const containerRef = useRef<HTMLDivElement>(null);

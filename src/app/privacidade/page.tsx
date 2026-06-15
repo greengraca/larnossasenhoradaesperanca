@@ -1,16 +1,14 @@
 import Link from "next/link";
 
-// NOTA: Texto-base de RGPD para revisão jurídica. Os campos entre [parênteses]
-// devem ser confirmados pelo Lar (denominação social, NIF e, caso aplicável,
-// o contacto do Encarregado de Proteção de Dados).
+// NOTA: Texto-base de RGPD, alinhado com os dados da entidade responsável.
+// Recomenda-se uma revisão jurídica final antes da publicação definitiva.
 
 const sections = [
   {
     title: "1. Responsável pelo tratamento",
     body: [
-      "O responsável pelo tratamento dos seus dados pessoais é o Lar Familiar Nossa Senhora da Esperança [denominação social e NIF a confirmar], com morada na Rua Condessa Maria Delgada 58, 2540-624 Roliça, Portugal.",
+      "O responsável pelo tratamento dos seus dados pessoais é a Instante de Ternura Unipessoal, Lda. (NIF 510933203), entidade que explora o Lar Familiar Nossa Senhora da Esperança, com morada na Rua Condessa Maria Delgada 58, 2540-624 Roliça, Portugal.",
       "Para qualquer questão relacionada com proteção de dados, pode contactar-nos através do email instantedeternura@gmail.com ou dos telefones 913 835 271 e 262 608 326.",
-      "Encarregado de Proteção de Dados (EPD): [contacto a indicar, caso esteja designado].",
     ],
   },
   {

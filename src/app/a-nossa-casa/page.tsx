@@ -33,6 +33,8 @@ const photos: Photo[] = [
   // Exteriores & Envolvente
   { src: "4424", w: 1600, h: 1067, cat: "exteriores", alt: "Fachada e jardim do lar" },
   { src: "4425", w: 1600, h: 1067, cat: "exteriores", alt: "Entrada principal do lar" },
+  { src: "4457", w: 1600, h: 1067, cat: "exteriores", alt: "Fachada principal do lar" },
+  { src: "4470", w: 1600, h: 1067, cat: "exteriores", alt: "Fachada do lar e envolvente" },
   { src: "4427", w: 1600, h: 1067, cat: "exteriores", alt: "Espaço de refeições ao ar livre" },
   { src: "4432", w: 1600, h: 1067, cat: "exteriores", alt: "Alpendre e exterior do edifício" },
   { src: "4434", w: 1600, h: 1067, cat: "exteriores", alt: "Acessos exteriores do lar" },
@@ -44,11 +46,11 @@ const photos: Photo[] = [
   { src: "4453", w: 1600, h: 1067, cat: "exteriores", alt: "Jardim e envolvente natural" },
   { src: "4466", w: 1600, h: 1067, cat: "exteriores", alt: "Vista exterior do edifício" },
   // Espaços Comuns
-  { src: "4457", w: 1600, h: 1067, cat: "comuns", alt: "Hall de entrada" },
-  { src: "4470", w: 1600, h: 1067, cat: "comuns", alt: "Sala de estar luminosa" },
   { src: "4477", w: 1600, h: 1067, cat: "comuns", alt: "Sala de atividades" },
   { src: "4479", w: 1600, h: 1067, cat: "comuns", alt: "Detalhe decorativo de uma sala comum" },
   { src: "4482", w: 1600, h: 1067, cat: "comuns", alt: "Sala de refeições" },
+  { src: "4485", w: 1600, h: 1067, cat: "comuns", alt: "Refeitório do lar" },
+  { src: "4487", w: 1600, h: 1067, cat: "comuns", alt: "Refeitório do lar" },
   { src: "4504", w: 1067, h: 1600, cat: "comuns", alt: "Capela do lar" },
   { src: "4505", w: 1600, h: 1067, cat: "comuns", alt: "Capela do lar" },
   { src: "4508", w: 1600, h: 1067, cat: "comuns", alt: "Sala de convívio" },
@@ -56,8 +58,6 @@ const photos: Photo[] = [
   { src: "4514", w: 1600, h: 1067, cat: "comuns", alt: "Sala de estar comum" },
   { src: "4518", w: 1600, h: 1067, cat: "comuns", alt: "Salão comum" },
   // Quartos
-  { src: "4485", w: 1600, h: 1067, cat: "quartos", alt: "Quarto individual" },
-  { src: "4487", w: 1600, h: 1067, cat: "quartos", alt: "Quarto com vista para o jardim" },
   { src: "4489", w: 1600, h: 1067, cat: "quartos", alt: "Quarto duplo" },
   { src: "4490", w: 1600, h: 1067, cat: "quartos", alt: "Quarto confortável" },
   { src: "4492", w: 1600, h: 1067, cat: "quartos", alt: "Quarto com duas camas" },
